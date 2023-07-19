@@ -2,6 +2,7 @@ import ProductContext from "@/context/Product.tsx";
 import axios from "axios";
 import { useContext, useEffect } from "react";
 
+
 const List = () => {
     const { state, dispatch } = useContext(ProductContext) as any;
     console.log("state", state);
