@@ -5,15 +5,15 @@ type Props = {};
 
 const Counter = () => {
     // const { state, dispatch } = useContext(CounterContext);
-    const { count } = useSelector((state: any) => state);
+    const { count } = useSelector((state: any) => state.counter);
     const dispatch = useDispatch();
     console.log(count); // { count: 0}
     return (
         <div>
             Counter {count}
-            <button onClick={() => dispatch({ type: "INCREMENT" })}>INCREMENT</button>
-            <button onClick={() => dispatch({ type: "DECREMENT" })}>DECREMENT</button>
-            <button onClick={() => dispatch({ type: "INCREASE", payload: 10 })}>DECREMENT</button>
+            <button onClick={() => dispatch({ type: "counter/increment" })}>INCREMENT</button>
+            <button onClick={() => dispatch({ type: "counter/decrement" })}>DECREMENT</button>
+            <button onClick={() => dispatch({ type: "counter/increase", payload: 10 })}>DECREMENT</button>
         </div>
     );
 };
